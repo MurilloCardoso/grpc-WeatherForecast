@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Previsão do Tempo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef;
+      padding: 30px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+    }
+    .resultado {
+      margin-top: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Previsão do Tempo</h1>
+
+  <form method="POST" action="/previsao">
+    <input type="text" name="cidade" placeholder="Digite a cidade" required />
+    <button type="submit">Buscar</button>
+  </form>
+
+  <% if (weather) { %>
+    <div class="resultado">
+      <h3>Clima em <%= weather.cidade %></h3>
+      <p>🌡️ Temperatura: <%= weather.temperatura %></p>
+      <p>💧 Umidade: <%= weather.umidade %></p>
+      <p>☁️ Condição: <%= weather.condicao %></p>
+      <p>🌧️ Chance de Chuva: <%= weather.chanceDeChuva %></p>
+    </div>
+  <% } %>
+
+  <% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
+</body>
+</html>

@@ -1,7 +1,7 @@
 const xmlrpc = require('xmlrpc');
 const axios = require('axios');
 
-const API_KEY = 'ee9cdd08cf4ebe523210a63f719ae0da'; // coloque sua chave real aqui
+const API_KEY = 'KEY_API_WEATHER'; // coloque sua chave real aqui
 
 const server = xmlrpc.createServer({ host: 'localhost', port: 9090 });
 
