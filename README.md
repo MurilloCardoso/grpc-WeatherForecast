@@ -29,8 +29,13 @@ Quando um usuário requisita a previsão do tempo para uma cidade, o servidor XM
 
 ## 🚀 Como Executar o Projeto
 
+- O arquivo weatherClient.js é usado somente para testes em console, utilize o app.js para ver na interface.
+
 ### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/seu-usuario/nome-do-repo.git
 cd nome-do-repo
+npm install
+node weatherServer.js
+node app.js
